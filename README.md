@@ -4,3 +4,4 @@ It works best on a USB.
 **Educational Purposes Only!**
 
 Running this as default won't do much; you need to create your own .exe files!
+Default files are python files made by others, I DID NOT MAKE THEM!
