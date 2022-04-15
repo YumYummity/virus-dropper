@@ -10,19 +10,24 @@ EXE files inside "install" were NOT MADE BY ME! These are only test files.
 
 
 
+
 _Unobfuscated: Undetected by all antiviruses as of 04/15/2022._ 
+
 _Obfuscated/Release: Undetected by all but one antivirus (Kaspersky) as of 04/15/2022._ 
 
 _Virustotal for unobfuscated: https://www.virustotal.com/gui/file/d0ea4a13bdc2df2c33a6aa5d3191a81b1b9e833a38ac3e5d42b30287d03a4f70/detection
 
 _Virustotal for release: https://www.virustotal.com/gui/file/d1a2249c5f301e639a764733ca6a27d4b04d8bb5f26cf2cf8f89863d61fca22e/detection
 
-[Release is detected by Kaspersky as "HEUR:Trojan.BAT.Generic", try using the unobfuscated version of the Install.bat that isn't detected(Download source code)]
-
+==Release is detected by Kaspersky as "HEUR:Trojan.BAT.Generic", try using the unobfuscated version of the Install.bat that isn't detected (Download source code)==
 
 Exclusions for other antiviruses are not added; antiviruses won't detect the installer but will detect the installed files. It will add exclusions for Windows Defender.
 
 
+
+
 TODO (prob wont actually add these but who knows):
+
 Exclusions for other antiviruses (Avast, Bitdefender, Norton, etc.)
+
 Batch file generator (generates the installer)
