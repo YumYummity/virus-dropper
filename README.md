@@ -5,4 +5,4 @@ You can also add a scan exclusion where files can be hidden from Windows Defende
 Running this as default won't do much; you need to create your own .exe files!
 Default files are python files made by others, I DID NOT MAKE THEM!
 
-_Undetected by antiviruses as of 04/14/2022. Virustotal: https://www.virustotal.com/gui/file/efe648401157c630427e0a3ff52ab96feb4b1370c5ea5c2bc7bfcac7670c980f/detection_
+_Undetected by antiviruses as of 04/14/2022. Virustotal: https://www.virustotal.com/gui/file/5e2f0f82b1f7e824b40c27862781bb6e3523168245743ea24901c0a9fcdcb8f5?nocache=1
