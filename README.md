@@ -1,6 +1,7 @@
 Install files on a victim's computer! It can be any file, as Windows Defender won't interfere!
 You can also add a scan exclusion where files can be hidden from Windows Defender.
 **Educational Purposes Only!**
+Direct Installation of the .zip file may fail as "virus detected", and it's not wrong! Temporarily disable any anti-viruses and browser protection to download. Delete the "install" folder, and reenable protection!
 
 Obfuscator used made by @moom825
 Code: https://github.com/moom825/batch-obfuscator-made-in-python
