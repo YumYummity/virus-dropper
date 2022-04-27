@@ -1,4 +1,4 @@
-#Virus Dropper by YumYummity
+# Virus Dropper by YumYummity
 Install files on a victim's computer! It can be any file, as Windows Defender won't interfere!
 You can also add a scan exclusion where files can be hidden from Windows Defender.
 **Educational Purposes Only!**
@@ -10,7 +10,7 @@ Code: https://github.com/moom825/batch-obfuscator-made-in-python
 Running this as default won't do much; you need to create your own .exe files!
 EXE files inside "install" were NOT MADE BY ME! These are only test files.
 
-#Detection
+# Detection
 _Unobfuscated: Undetected by all antiviruses as of 04/15/2022._ 
 
 _Obfuscated/Release: Undetected by all but one antivirus (Kaspersky) as of 04/15/2022._ 
@@ -24,14 +24,14 @@ _Virustotal for release: https://www.virustotal.com/gui/file/d1a2249c5f301e639a7
 Exclusions for other antiviruses are not added; antiviruses won't detect the installer but will detect the installed files. It will add exclusions for Windows Defender.
 
 
-#todo
+# Todo
 (prob wont actually add these but who knows):
 
 Exclusions for other antiviruses (Avast, Bitdefender, Norton, etc.)
 
 Batch file generator (generates the installer)
 
-#Changelog
+# Changelog
 - Added TaskScheduler to run files as Administrator without prompt
 - Compacted files
 - Starts main install.bat hidden
