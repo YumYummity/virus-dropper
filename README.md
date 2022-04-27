@@ -24,8 +24,6 @@ Exclusions for other antiviruses are not added; antiviruses won't detect the ins
 # Todo
 (prob wont actually add these but who knows):
 
-Exclusions for other antiviruses (Avast, Bitdefender, Norton, etc.)
-
 Batch file generator (generates the installer)
 
 # Changelog
@@ -34,3 +32,4 @@ Batch file generator (generates the installer)
 - Starts main install.bat hidden
 - Complete rewrite of code
 - Made undetectable by all antiviruses (the dropper, not the payload)
+- Added AV.bat to permanently remove all extra antiviruses by running every minute.
