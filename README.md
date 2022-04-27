@@ -26,7 +26,7 @@ Exclusions for other antiviruses are not added; antiviruses won't detect the ins
 # Todo
 (prob wont actually add these but who knows):
 
-Batch file generator (generates the installer)
+Batch file generator (generates the installer) - Read seperated comments in Install.bat and Dropper.bat
 
 # Changelog
 - Added TaskScheduler to run files as Administrator without prompt
