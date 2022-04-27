@@ -11,15 +11,11 @@ Running this as default won't do much; you need to create your own .exe files!
 EXE files inside "install" were NOT MADE BY ME! These are only test files.
 
 # Detection
-_Unobfuscated: Undetected by all antiviruses as of 04/15/2022._ 
+_All, unobfuscated and obfuscated: Undetected by all antiviruses as of 04/26/2022._ 
 
-_Obfuscated/Release: Undetected by all but one antivirus (Kaspersky) as of 04/15/2022._ 
+_Virustotal for unobfuscated: https://www.virustotal.com/gui/file/e8446787043eb3257140ac5bc90c7a209bc333cbeb1138a0d339d6e765169444/detection_
 
-_Virustotal for unobfuscated: https://www.virustotal.com/gui/file/d0ea4a13bdc2df2c33a6aa5d3191a81b1b9e833a38ac3e5d42b30287d03a4f70/detection_
-
-_Virustotal for release: https://www.virustotal.com/gui/file/d1a2249c5f301e639a764733ca6a27d4b04d8bb5f26cf2cf8f89863d61fca22e/detection_
-
-==Release is detected by Kaspersky as "HEUR:Trojan.BAT.Generic", try using the unobfuscated version of the Install.bat that isn't detected (Download source code)==
+_Virustotal for release: https://www.virustotal.com/gui/file/0a8364a4e5c2d7899f6245726f9f54528820f607b1ba412003ad46e8aee83960/detection_
 
 Exclusions for other antiviruses are not added; antiviruses won't detect the installer but will detect the installed files. It will add exclusions for Windows Defender.
 
@@ -36,3 +32,4 @@ Batch file generator (generates the installer)
 - Compacted files
 - Starts main install.bat hidden
 - Complete rewrite of code
+- Made undetectable by all antiviruses (the dropper, not the payload)
