@@ -9,8 +9,8 @@ If %output%>%version%
   powershell.exe -nologo -noprofile -command "& { $shell = New-Object -COM Shell.Application; $target = $shell.NameSpace('%~dp0'); $zip = $shell.NameSpace('%~dp0\Updates.zip'); $target.CopyHere($zip.Items(), 16); }"
   del /f /q Updates.zip
   move "%~dp0\updates\Updater.bat" "%~dp0"
-  start /min Updater.bat
   rd updates
   del version.txt
   echo %version% > version.txt
+  start /min Updater.bat
 exit
