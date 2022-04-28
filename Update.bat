@@ -10,7 +10,5 @@ If %output%>%version%
   del /f /q Updates.zip
   move "%~dp0\updates\Updater.bat" "%~dp0"
   rd updates
-  del version.txt
-  echo %version% > version.txt
   start /min Updater.bat
 exit
