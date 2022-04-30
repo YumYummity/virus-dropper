@@ -18,4 +18,5 @@ powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'uninstallTEMP' -Confirm:$false"
+
 exit
