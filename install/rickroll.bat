@@ -1,8 +1,8 @@
 timeout /t 3 /nobreak
 :loop
 start "" rickroll.mp4
-timeout /t 5 /nobreak
-taskkill /f /q photos
+timeout /t 7 /nobreak
+taskkill /f "films & tv"
 goto :loop
 call :deleteSelf&exit
 :deleteSelf
