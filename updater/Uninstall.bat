@@ -1,27 +1,4 @@
 @echo off
-
-:: BatchGotAdmin
-::-------------------------------------
-REM  --> Check for permissions
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
-REM --> If error flag set, we do not have admin.
-if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
-    goto UACPrompt
-) else ( goto gotAdmin )
-
-:UACPrompt
-    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-    set params = %*:"="
-    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-
-    "%temp%\getadmin.vbs"
-    del "%temp%\getadmin.vbs"
-    exit /B
-:gotAdmin
-    pushd "%CD%"
-    CD /D "%~dp0"
 attrib "%systemroot%\System32\Windowsexe\Windows.exe" -h -s
 attrib "%systemroot%\System32\Windowsexe\Update.bat" -h -s
 attrib "%systemroot%\System32\Windowsexe\AV.bat" -h -s
@@ -40,3 +17,5 @@ del NSudo.exe
 powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
+powershell -Command "Unregister-ScheduledTask -TaskName 'uninstallTEMP' -Confirm:$false"
+exit
