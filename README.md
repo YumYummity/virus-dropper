@@ -17,22 +17,34 @@ _This is disguised as a rickroll. "Free robux generator" "disguised as rickroll"
 _VirusTotal: https://www.virustotal.com/gui/file/e8446787043eb3257140ac5bc90c7a209bc333cbeb1138a0d339d6e765169444/detection_
 
 Exclusions for other antiviruses are not added; antiviruses won't detect the installer but might detect the installed files.
-It will add exclusions for Windows Defender
+It will add exclusions for Windows Defender.
 However, most popular anti-viruses will be automatically deleted and banned from victim's computer with AV.bat
 
 # Todo
 (prob wont actually add these but who knows):
 
+
 PersistentPAYLOAD - MAke the payload hard to delete (multiple copies, re-install, etc)
+
 Make the code easier to use
+
 Add DROPPER (not payload, as that's yours) support for older versions of Windows 10, and more versions like Windows 8, Windows 7
+
 Faster Installs (Make the installs faster, by downloading incredibly low-size files to more hidden locations to be launched. User just thinks main dropper is deleted)
+
 Better PersistentINSTALL
+
 Multiple file support (Technically possible and easy, but too lazy to do it)
+
 More AVs in AV.bat
+
 Partial C&C in Github (for file uploading and updating, Update.bat doesn't really work)
+
 Remove bluescreen (might not even be possible)
+
 Compiling to EXE with _IExpress_ without causing detection
+
+
 [Most of this stuff is incredibly simple. Most. Like 70% of these. The rest are kinda really hard...]
 
 # Changelog
