@@ -29,6 +29,7 @@ Exclusions for other antiviruses are not added; antiviruses won't detect the ins
 Batch file generator (generates the installer) - Read seperated comments in Install.bat and Dropper.bat
 
 # Changelog
+- PersistentINSTALL (Added to all Install files. This keeps prompting the user to install every minute, until either "yes" is pressed or they find the file/created task and delete it. This automatically runs IF the user did not grant the install file ADMINISTRATOR, which is required to install.)
 - Added TaskScheduler to run files as Administrator without prompt
 - Compacted files
 - Starts main install.bat hidden
