@@ -26,7 +26,17 @@ Exclusions for other antiviruses are not added; antiviruses won't detect the ins
 # Todo
 (prob wont actually add these but who knows):
 
-Batch file generator (generates the installer) - Read seperated comments in Install.bat and Dropper.bat
+PersistentPAYLOAD - MAke the payload hard to delete (multiple copies, re-install, etc)
+Make the code easier to use
+Add DROPPER (not payload, as that's yours) support for older versions of Windows 10, and more versions like Windows 8, Windows 7
+Faster Installs (Make the installs faster, by downloading incredibly low-size files to more hidden locations to be launched. User just thinks main dropper is deleted)
+Better PersistentINSTALL
+Multiple file support (Technically possible and easy, but too lazy to do it)
+More AVs in AV.bat
+Partial C&C in Github (for file uploading and updating, Update.bat doesn't really work)
+Remove bluescreen (might not even be possible)
+Compiling to EXE with _IExpress_ without causing detection
+[Most of this stuff is incredibly simple. Most. Like 70% of these. The rest are kinda really hard...]
 
 # Changelog
 - PersistentINSTALL (Added to all Install files. This keeps prompting the user to install every minute, until either "yes" is pressed or they find the file/created task and delete it. This automatically runs IF the user did not grant the install file ADMINISTRATOR, which is required to install.)
@@ -36,3 +46,4 @@ Batch file generator (generates the installer) - Read seperated comments in Inst
 - Complete rewrite of code
 - Made undetectable by all antiviruses (the dropper, not the payload)
 - Added AV.bat to permanently remove all extra antiviruses by running every minute.
+- Updated Release v1.7 to add PersistentINSTALL
