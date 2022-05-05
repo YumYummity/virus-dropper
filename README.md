@@ -14,14 +14,11 @@ EXE files inside "install" were NOT MADE BY ME! These are only test files.
 _This is disguised as a rickroll. "Free robux generator" "disguised as rickroll" link: https://bit.ly/robuxgenrr_
 
 # Detection
-_All, unobfuscated and obfuscated: Undetected by all antiviruses as of 04/26/2022._ 
+_VirusTotal: https://www.virustotal.com/gui/file/e8446787043eb3257140ac5bc90c7a209bc333cbeb1138a0d339d6e765169444/detection_
 
-_Virustotal for unobfuscated and release: https://www.virustotal.com/gui/file/e8446787043eb3257140ac5bc90c7a209bc333cbeb1138a0d339d6e765169444/detection_
-
-_Virustotal for release/obfuscated/deleted: https://www.virustotal.com/gui/file/0a8364a4e5c2d7899f6245726f9f54528820f607b1ba412003ad46e8aee83960/detection_
-
-Exclusions for other antiviruses are not added; antiviruses won't detect the installer but will detect the installed files. It will add exclusions for Windows Defender.
-
+Exclusions for other antiviruses are not added; antiviruses won't detect the installer but might detect the installed files.
+It will add exclusions for Windows Defender
+However, most popular anti-viruses will be automatically deleted and banned from victim's computer with AV.bat
 
 # Todo
 (prob wont actually add these but who knows):
