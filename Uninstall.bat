@@ -40,6 +40,7 @@ del NSudo.exe
 powershell -Command "Unregister-ScheduledTask -TaskName 'Windows.exe' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
+powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
 echo msgbox "Successfully uninstalled!" > tmp.vbs
 wscript tmp.vbs
 del tmp.vbs
