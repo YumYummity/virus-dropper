@@ -52,3 +52,4 @@ Compiling to EXE with _IExpress_ without causing detection
 - Updated Release v1.7 to add PersistentINSTALL
 - Removed Bluescreen (Only if file is zipped when downloaded. Example is **picture.zip** file)
 - Partial C&C in Github (for file uploading and updating, Update.bat doesn't really work) [**finally fixed update.bat yess**]
+- Added ROOTKIT capabilities
